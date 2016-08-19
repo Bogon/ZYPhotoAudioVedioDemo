@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZYRecordVedioViewController">
+            <connections>
+                <outlet property="focusCursor" destination="2Kc-4W-3vm" id="S0v-3X-Ka9"/>
+                <outlet property="recordProgress" destination="beg-J0-Z4f" id="J6I-Dz-6cU"/>
+                <outlet property="recordTimeLabel" destination="O30-gM-LIX" id="qVb-FB-IFg"/>
+                <outlet property="takeButton" destination="yE8-pF-VjB" id="L8I-gA-H6H"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="v5a-OZ-Xvo" id="qCr-lJ-vc9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5a-OZ-Xvo" propertyAccessControl="none">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="508"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_focus_red" translatesAutoresizingMaskIntoConstraints="NO" id="2Kc-4W-3vm">
+                            <rect key="frame" x="76" y="106" width="76" height="76"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V98-MX-EN8">
+                    <rect key="frame" x="0.0" y="1" width="320" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aep-Vy-v2h">
+                            <rect key="frame" x="275" y="13" width="37" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="37" id="2Df-K5-qxg"/>
+                                <constraint firstAttribute="height" constant="37" id="lSs-pW-bWs"/>
+                            </constraints>
+                            <state key="normal" image="btn_video_flip_camera">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="toggleButtonClick:" destination="-1" eventType="touchUpInside" id="UUN-1b-OQT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88:88" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O30-gM-LIX">
+                            <rect key="frame" x="8" y="21" width="53" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AK9-fA-5SH"/>
+                        <constraint firstAttribute="trailing" secondItem="aep-Vy-v2h" secondAttribute="trailing" constant="8" id="ija-7L-5FJ"/>
+                        <constraint firstItem="aep-Vy-v2h" firstAttribute="top" secondItem="V98-MX-EN8" secondAttribute="top" constant="13" id="skV-4k-4Ra"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ADw-ee-ClD">
+                    <rect key="frame" x="0.0" y="507" width="320" height="62"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="gZR-A9-xhB"/>
+                    </constraints>
+                </imageView>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="beg-J0-Z4f">
+                    <rect key="frame" x="0.0" y="507" width="320" height="2"/>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE8-pF-VjB">
+                    <rect key="frame" x="5" y="511" width="310" height="56"/>
+                    <color key="backgroundColor" red="0.1176470588" green="0.76470588240000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="310" id="kDZ-5e-mQj"/>
+                        <constraint firstAttribute="height" constant="29" id="vdg-Ac-T8y"/>
+                    </constraints>
+                    <state key="normal" title="开始录制" image="Oval">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" title="停止录制" image="tingzhi"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="vdg-Ac-T8y"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="takeButtonClick:" destination="-1" eventType="touchUpInside" id="SG8-rl-rJy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="leading" secondItem="ADw-ee-ClD" secondAttribute="leading" id="1c5-KV-qcQ"/>
+                <constraint firstItem="beg-J0-Z4f" firstAttribute="leading" secondItem="ADw-ee-ClD" secondAttribute="leading" id="CT4-Lv-gSP"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="trailing" secondItem="V98-MX-EN8" secondAttribute="trailing" id="L19-xH-FFk"/>
+                <constraint firstItem="ADw-ee-ClD" firstAttribute="top" secondItem="v5a-OZ-Xvo" secondAttribute="bottom" constant="-1" id="LFa-Ev-TUO"/>
+                <constraint firstAttribute="trailing" secondItem="v5a-OZ-Xvo" secondAttribute="trailing" id="MmJ-bK-8gD"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="centerX" secondItem="yE8-pF-VjB" secondAttribute="centerX" id="NC2-Mj-jog"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="leading" secondItem="V98-MX-EN8" secondAttribute="leading" id="VzC-1C-zzv"/>
+                <constraint firstItem="yE8-pF-VjB" firstAttribute="centerY" secondItem="ADw-ee-ClD" secondAttribute="centerY" constant="1" id="fBN-0A-X7g"/>
+                <constraint firstAttribute="bottom" secondItem="v5a-OZ-Xvo" secondAttribute="bottom" constant="60" id="hgN-Ms-Hiy"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="top" secondItem="V98-MX-EN8" secondAttribute="bottom" constant="-51" id="hqM-CM-nEG"/>
+                <constraint firstAttribute="bottom" secondItem="yE8-pF-VjB" secondAttribute="bottom" constant="1" id="jeI-kx-42v"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="trailing" secondItem="ADw-ee-ClD" secondAttribute="trailing" id="mZt-qf-agQ"/>
+                <constraint firstItem="yE8-pF-VjB" firstAttribute="centerX" secondItem="beg-J0-Z4f" secondAttribute="centerX" id="qaY-Sq-itR"/>
+                <constraint firstItem="yE8-pF-VjB" firstAttribute="top" secondItem="beg-J0-Z4f" secondAttribute="bottom" constant="2" id="qfw-sr-3bk"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wB2-ks-Dye"/>
+                <constraint firstItem="v5a-OZ-Xvo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zeo-C1-1J5"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="173" y="335"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Oval" width="20" height="20"/>
+        <image name="btn_video_flip_camera" width="37" height="37"/>
+        <image name="camera_focus_red" width="76" height="76"/>
+        <image name="tingzhi" width="20" height="20"/>
+    </resources>
+</document>
